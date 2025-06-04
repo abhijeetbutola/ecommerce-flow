@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White background */
+    --foreground: 222.2 84% 4.9%; /* Default text color (dark grey/black) */
+
+    --card: 0 0% 100%; /* Card background - white */
+    --card-foreground: 222.2 84% 4.9%; /* Text on card */
+
+    --popover: 0 0% 100%; /* Popover background - white */
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 346.8 100% 66.1%; /* Main button color: hsl(346, 100%, 66%) */
+    --primary-hover: 346.8 90% 60%; /* Slightly darker/desaturated hover for primary */
+    --primary-foreground: 0 0% 100%; /* Text on primary button - white */
+
+    --secondary: 210 40% 96.1%; /* e.g., slate-100 */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* e.g., slate-700 */
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214.3 31.8% 91.4%; /* Default border - light grey (e.g., slate-200) */
+    --input: 214.3 31.8% 91.4%; /* Input border - light grey */
+    --ring: 346.8 100% 66.1%; /* Ring color - same as primary for focus */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Define dark mode colors if needed, or keep them similar if the theme is light-only */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 346.8 100% 66.1%; /* Keep primary vibrant in dark mode */
+    --primary-hover: 346.8 90% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 346.8 100% 66.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border; /* Apply the default light grey border to elements */
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom active state for buttons if needed beyond default browser styles */
+@layer components {
+  .btn-primary-active {
+    @apply transform scale-[0.98] brightness-90; /* Example active state */
+  }
+}
